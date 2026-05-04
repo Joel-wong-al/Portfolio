@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mission File · Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" />
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet" href="css/project.css" />
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- BACKGROUND -->
+<canvas id="stars-bg"></canvas>
+<div class="nebula"></div>
+
+<!-- FOLDER OPENING ANIMATION -->
+<div id="opener">
+  <div class="opener-half top"></div>
+  <div class="opener-half bot"></div>
+  <div class="opener-text">
+    OPENING FILE
+    <small>Decrypting · Loading assets</small>
+  </div>
+</div>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <a href="index.html#projects" class="back-link"><span class="arr">←</span> Back to Archive</a>
+  <div class="file-id" id="topFileId">// FILE-01</div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-tag" id="heroTag">Mission File · 2024</div>
+  <h1 id="heroTitle">Project Title Goes Here</h1>
+  <p class="hero-sub" id="heroSub">
+    A one-line elevator pitch that gets recruiters or visitors curious immediately. What is it,
+    and why was it interesting to build?
+  </p>
+  <div class="hero-meta">
+    <div class="meta-cell">
+      <div class="label">Role</div>
+      <div class="value" id="metaRole">Designer & Dev</div>
+    </div>
+    <div class="meta-cell">
+      <div class="label">Timeline</div>
+      <div class="value" id="metaTimeline">3 Months</div>
+    </div>
+    <div class="meta-cell">
+      <div class="label">Type</div>
+      <div class="value" id="metaType">Personal Project</div>
+    </div>
+    <div class="meta-cell">
+      <div class="label">Status</div>
+      <div class="value" id="metaStatus">Live</div>
+    </div>
+  </div>
+</section>
+
+<!-- BANNER -->
+<div class="banner">
+  <div class="banner-frame" id="bannerFrame">
+    <div class="banner-corners">
+      <span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+  <main class="content-main">
+    <h2>Overview</h2>
+    <div id="overviewBody">
+      <p>
+        Replace this with a fuller introduction to the project. What problem does it solve? Who is
+        it for? What makes it different from other things in the same space? Aim for two short
+        paragraphs that paint the full picture.
+      </p>
+      <p>
+        You can also describe the brief, the constraints, or the spark that started the project —
+        whatever helps the reader see why this work mattered.
+      </p>
+    </div>
+
+    <h2>The Process</h2>
+    <div class="process-steps" id="processList">
+      <div class="step" data-num="01">
+        <h4>Research &amp; Discovery</h4>
+        <p>How did you start? Interviews, references, competitive analysis, sketches.</p>
+      </div>
+      <div class="step" data-num="02">
+        <h4>Design Exploration</h4>
+        <p>Wireframes, moodboards, prototypes. Show the thinking, not just the polish.</p>
+      </div>
+      <div class="step" data-num="03">
+        <h4>Build &amp; Iteration</h4>
+        <p>Tech decisions, hard problems you solved, what you cut, what you kept.</p>
+      </div>
+      <div class="step" data-num="04">
+        <h4>Launch &amp; Reflection</h4>
+        <p>What shipped, what you learned, what you'd do differently next time.</p>
+      </div>
+    </div>
+
+    <h2>Outcome</h2>
+    <p id="outcomeIntro">
+      Wrap it up with concrete results. Numbers if you have them — users, downloads, awards,
+      reception. Otherwise reflect on what made the project successful for you.
+    </p>
+    <ul id="outcomeList">
+      <li>Key result or metric one</li>
+      <li>Key result or metric two</li>
+      <li>Key result or metric three</li>
+    </ul>
+  </main>
+
+  <aside class="sidebar">
+    <div class="side-block">
+      <h3>// Tools Used</h3>
+      <div class="tools-list" id="toolsList">
+        <span>Figma</span><span>React</span><span>Three.js</span><span>GSAP</span>
+      </div>
+    </div>
+    <div class="side-block" id="linksBlock">
+      <h3>// Links</h3>
+      <ul class="links-list" id="linksList">
+        <li><a href="#">Live Demo</a></li>
+        <li><a href="#">GitHub Repo</a></li>
+        <li><a href="#">Case Study PDF</a></li>
+      </ul>
+    </div>
+    <div class="side-block">
+      <h3>// Credits</h3>
+      <p class="credits-text" id="creditsText">
+        Designed &amp; built by Joel Wong.<br />
+        Special thanks to anyone who collaborated.
+      </p>
+    </div>
+  </aside>
+</div>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallerySection">
+  <h2>Visual Archive</h2>
+  <div class="gallery-grid" id="galleryGrid">
+    <div class="g-frame"><span>Screenshot 01</span></div>
+    <div class="g-frame"><span>Screenshot 02</span></div>
+    <div class="g-frame"><span>Screenshot 03</span></div>
+    <div class="g-frame"><span>Process Sketch</span></div>
+  </div>
+</section>
+
+<!-- NEXT -->
+<div class="next-bar">
+  <a href="index.html#projects" class="next-card">
+    <div>
+      <div class="label">Next Transmission</div>
+      <h3>Return to the Archive</h3>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+</div>
+
+<footer>
+  <div class="footer-meta">End of File · Joel Wong</div>
+</footer>
+
+<!-- JAVASCRIPT MODULES -->
+<script src="js/cursor.js"></script>
+<script src="js/stars.js"></script>
+<script src="js/project.js"></script>
+
+</body>
+</html>

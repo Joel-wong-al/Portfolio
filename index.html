@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Joel Wong — Digital Universe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- INTRO ANIMATION -->
+<div id="intro">
+  <canvas id="intro-canvas"></canvas>
+  <button class="skip-intro" id="skipBtn">Skip ▸</button>
+  <div class="intro-text">
+    <span class="line">INITIATING</span>
+    <span>Establishing connection · Decrypting archive</span>
+  </div>
+</div>
+
+<!-- SITE-WIDE STARS + NEBULA -->
+<canvas id="stars-bg"></canvas>
+<div class="nebula"></div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="logo">[ J<span>·</span>W ]</div>
+  <ul class="nav-links">
+    <li><a href="#about">01 / About</a></li>
+    <li><a href="#skills">02 / Skills</a></li>
+    <li><a href="#experience">03 / Experience</a></li>
+    <li><a href="#achievements">04 / Achievements</a></li>
+    <li><a href="#projects">05 / Projects</a></li>
+    <li><a href="#contact">06 / Contact</a></li>
+  </ul>
+  <!-- Mobile hamburger trigger — only visible below 768px -->
+  <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile slide-in menu (rendered always, hidden by CSS off-screen until opened) -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu-backdrop" data-menu-close></div>
+  <aside class="mobile-menu-panel" role="dialog" aria-modal="true" aria-label="Site navigation">
+    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu" data-menu-close>×</button>
+    <div class="mobile-menu-eyebrow">// Navigation</div>
+    <ul class="mobile-menu-links">
+      <li><a href="#about" data-menu-close><span class="mm-num">01</span><span class="mm-name">About</span></a></li>
+      <li><a href="#skills" data-menu-close><span class="mm-num">02</span><span class="mm-name">Skills</span></a></li>
+      <li><a href="#experience" data-menu-close><span class="mm-num">03</span><span class="mm-name">Experience</span></a></li>
+      <li><a href="#achievements" data-menu-close><span class="mm-num">04</span><span class="mm-name">Achievements</span></a></li>
+      <li><a href="#projects" data-menu-close><span class="mm-num">05</span><span class="mm-name">Projects</span></a></li>
+      <li><a href="#contact" data-menu-close><span class="mm-num">06</span><span class="mm-name">Contact</span></a></li>
+    </ul>
+    <div class="mobile-menu-footer">
+      <a href="mailto:joelwongwanhao@gmail.com">joelwongwanhao@gmail.com</a>
+    </div>
+  </aside>
+</div>
+
+<!-- LANDING -->
+<section id="landing">
+  <canvas id="landing-canvas"></canvas>
+  <div class="landing-content">
+    <div class="landing-tag">Transmission Active · Sector 0xA1</div>
+    <h1 class="landing-name">Joel <span class="accent">Wong</span></h1>
+    <div class="landing-role">Designer <span>×</span> Developer <span>×</span> Explorer</div>
+    <p class="landing-intro">
+      Welcome to my digital universe. I build immersive, interactive experiences at the
+      intersection of design and code — from interfaces that feel alive to projects that
+      tell stories. Take a journey through my work.
+    </p>
+    <div class="cta-row">
+      <a href="#projects" class="btn">Enter Archive</a>
+      <a href="#about" class="btn ghost">About Me</a>
+    </div>
+  </div>
+  <div class="scroll-cue">
+    <span>Scroll to explore</span>
+    <div class="line"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="module" id="about">
+  <div class="section-header reveal">
+    <div>
+      <div class="section-label">Profile · Bio Unit</div>
+      <h2 class="section-title"><span class="num">01</span>About Me</h2>
+    </div>
+    <div class="section-meta">/ identification</div>
+  </div>
+  <div class="about-grid">
+    <div class="about-text reveal delay-1">
+      <p>
+        I am an <strong>Immersive Media student</strong> from
+        <strong>Ngee Ann Polytechnic</strong>, with a focus on 3D modelling,
+        web development, and interactive design.
+      </p>
+      <p>
+        I enjoy creating engaging digital experiences, especially those that combine
+        <strong>visuals and user interaction</strong>.
+      </p>
+      <p>
+        Outside of my work, I enjoy playing <strong>volleyball</strong>, learning
+        <strong>crocheting</strong>, and exploring new environments. I am always looking to
+        challenge myself and grow by taking on new experiences and opportunities.
+      </p>
+      <div class="about-stats">
+        <div class="stat-card">
+          <div class="stat-num">04+</div>
+          <div class="stat-label">Years Building</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">03</div>
+          <div class="stat-label">Projects Launched</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">07</div>
+          <div class="stat-label">Awards / Honors</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">∞</div>
+          <div class="stat-label">Ideas Loading</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-orbit reveal delay-2">
+      <div class="orbit-ring"></div>
+      <div class="orbit-ring"></div>
+      <div class="orbit-ring"></div>
+      <div class="orbit-core"></div>
+      <div class="orbit-dot d1"></div>
+      <div class="orbit-dot d2"></div>
+      <div class="orbit-dot d3"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="module" id="skills">
+  <div class="section-header reveal">
+    <div>
+      <div class="section-label">Capabilities · Toolset</div>
+      <h2 class="section-title"><span class="num">02</span>Skills</h2>
+    </div>
+    <div class="section-meta">/ explore the system</div>
+  </div>
+
+  <p class="skills-hint reveal">Hover a planet to scan · Click to open detailed read-out</p>
+
+  <!-- SOLAR SYSTEM -->
+  <div class="planet-system reveal" id="planetSystem">
+
+    <!-- Layer 0: deep ambient effects (light streaks + glow pulses) -->
+    <div class="system-glow-pulse"></div>
+    <div class="light-streaks" id="lightStreaks"></div>
+
+    <!-- Layer 1: floating ambient particles -->
+    <div class="system-particles" id="systemParticles"></div>
+
+    <!-- Layer 2: orbit rings (drawn behind everything) -->
+    <svg class="orbit-rings" viewBox="-300 -250 600 500" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+      <ellipse cx="0" cy="0" rx="90"  ry="32"  class="ring r1" />
+      <ellipse cx="0" cy="0" rx="135" ry="48"  class="ring r2" />
+      <ellipse cx="0" cy="0" rx="180" ry="64"  class="ring r3" />
+      <ellipse cx="0" cy="0" rx="225" ry="80"  class="ring r4" />
+      <ellipse cx="0" cy="0" rx="265" ry="92"  class="ring r5" />
+    </svg>
+
+    <!-- Layer 3: parallax wrapper — JS shifts this on mouse move -->
+    <div class="parallax-stage" id="parallaxStage">
+
+      <!-- Central core (the "sun") -->
+      <div class="system-core">
+        <div class="core-inner"></div>
+        <div class="core-halo"></div>
+        <div class="core-rays"></div>
+      </div>
+
+      <!-- 5 orbiting planets — JS sets their position every frame.
+           Each planet has:
+             .planet-surface  → the rotating textured ball (axial spin)
+             .planet-glow     → hover aura
+             .planet-decal    → the logo (stays facing viewer)
+      -->
+      <button class="planet planet-1" type="button"
+              data-skill="3D Modelling"
+              data-tagline="Maya · Substance Painter"
+              data-desc="Focus on creating 3D models using Maya and texturing with Substance Painter. Able to design both hard-surface and basic environment assets.">
+        <span class="planet-glow"></span>
+        <span class="planet-surface metallic"></span>
+        <img class="planet-decal" src="assets/logos/maya.png" alt="Maya logo" />
+      </button>
+
+      <button class="planet planet-2" type="button"
+              data-skill="Web Development"
+              data-tagline="HTML · CSS · JavaScript"
+              data-desc="Able to build responsive and interactive websites using HTML, CSS, and JavaScript, including animations and user interactions.">
+        <span class="planet-glow"></span>
+        <span class="planet-surface grid-code"></span>
+        <img class="planet-decal" src="assets/logos/html.png" alt="HTML5 logo" />
+      </button>
+
+      <button class="planet planet-3" type="button"
+              data-skill="UI/UX Design"
+              data-tagline="Figma · Prototyping"
+              data-desc="Focus on user experience, layout design, and creating intuitive and engaging interfaces.">
+        <span class="planet-glow"></span>
+        <span class="planet-surface gradient-soft"></span>
+        <span class="planet-decal text-decal">UX</span>
+      </button>
+
+      <button class="planet planet-4" type="button"
+              data-skill="Game Development"
+              data-tagline="Unity · C#"
+              data-desc="Experience in creating interactive applications using Unity and C#, including scripting and basic game mechanics.">
+        <span class="planet-glow"></span>
+        <span class="planet-surface energy"></span>
+        <img class="planet-decal" src="assets/logos/unity.png" alt="Unity logo" />
+      </button>
+
+      <button class="planet planet-5" type="button"
+              data-skill="Tools &amp; Workflow"
+              data-tagline="GitHub · VS Code"
+              data-desc="Familiar with version control and development tools, managing projects efficiently using GitHub and Visual Studio.">
+        <span class="planet-glow"></span>
+        <span class="planet-surface tech-clean"></span>
+        <img class="planet-decal" src="assets/logos/github.svg" alt="GitHub logo" />
+      </button>
+
+    </div>
+
+    <!-- Tooltip -->
+    <div class="planet-tooltip" id="planetTooltip">
+      <div class="tt-name"></div>
+      <div class="tt-tag"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILL SCAN PANEL -->
+<div class="scan-panel" id="scanPanel" aria-hidden="true">
+  <div class="scan-backdrop"></div>
+  <div class="scan-content" role="dialog" aria-modal="true" aria-labelledby="scanTitle">
+    <button class="scan-close" id="scanClose" aria-label="Close">×</button>
+
+    <div class="scan-planet">
+      <div class="scan-planet-inner" id="scanPlanetInner"></div>
+      <div class="scan-rings">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <div class="scan-info">
+      <div class="scan-eyebrow">// SCAN COMPLETE · TRANSMITTING</div>
+      <h3 class="scan-title" id="scanTitle">Skill</h3>
+      <div class="scan-tag" id="scanTag">Tagline</div>
+      <p class="scan-desc" id="scanDesc">Description.</p>
+
+      <div class="scan-readouts">
+        <div class="readout">
+          <span class="r-label">Class</span>
+          <span class="r-value" id="scanClass">—</span>
+        </div>
+        <div class="readout">
+          <span class="r-label">Status</span>
+          <span class="r-value">Active</span>
+        </div>
+        <div class="readout">
+          <span class="r-label">Signal</span>
+          <span class="r-value">Strong</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EXPERIENCE -->
+<section class="module galaxy-stage" id="experience">
+  <!-- Particle field for galaxy formation effect -->
+  <div class="galaxy-particles" id="galaxyParticles" aria-hidden="true"></div>
+  <!-- Soft swirl glow that pulses behind the cards once formed -->
+  <div class="galaxy-core-glow" aria-hidden="true"></div>
+
+  <div class="section-header reveal">
+    <div>
+      <div class="section-label">Trajectory · Career Path</div>
+      <h2 class="section-title"><span class="num">03</span>Work Experience</h2>
+    </div>
+    <div class="section-meta">/ flight log</div>
+  </div>
+
+  <div class="timeline">
+
+    <article class="tl-item" style="--tx: -360px; --ty: -180px; --rot: -8deg;">
+      <header class="tl-head">
+        <div class="tl-date">Mar — Apr 2026</div>
+        <div class="tl-tag">Internship</div>
+      </header>
+      <h3 class="tl-role">Product &amp; Business Development Intern</h3>
+      <div class="tl-org">iWOW · Buddy of Parents</div>
+      <p class="tl-desc">
+        Hands-on exposure to how a startup operates across product, business, and customer-facing areas.
+        Created product data sheets, researched payment gateway tools, audited the company website, studied
+        competitors, assisted with HDB onboarding, and designed a roadshow flyer.
+      </p>
+      <div class="tl-points">
+        <div class="tl-points-label">// Key takeaways</div>
+        <ul>
+          <li>Saw how startups operate across departments and how communication shapes team workflow</li>
+          <li>Translated technical product information into clearer customer-facing materials</li>
+          <li>Learned business and product fundamentals — payment gateways, purchase requests, delivery terms, white labelling</li>
+          <li>Developed UX intuition by reviewing the website from a customer's point of view</li>
+          <li>Strengthened empathy and communication while assisting older residents during HDB onboarding</li>
+        </ul>
+      </div>
+      <div class="tl-growth">
+        <span class="tl-growth-label">Growth</span>
+        <span>This taught me the importance of initiative — even when tasks aren't directly assigned, there's always something you can contribute by observing, researching, and helping the team work better.</span>
+      </div>
+    </article>
+
+    <article class="tl-item" style="--tx: 380px; --ty: -60px; --rot: 6deg;">
+      <header class="tl-head">
+        <div class="tl-date">2024 — 2025</div>
+        <div class="tl-tag">Part-Time</div>
+      </header>
+      <h3 class="tl-role">Banquet Server</h3>
+      <div class="tl-org">AZE Part Time</div>
+      <p class="tl-desc">
+        Supported event operations through table setup, food service, and guest assistance. The role
+        required working quickly and efficiently in a fast-paced environment while keeping every guest
+        served properly throughout the event.
+      </p>
+      <div class="tl-points">
+        <div class="tl-points-label">// Key takeaways</div>
+        <ul>
+          <li>Worked under real pressure during peak service — food out fast, no excuses</li>
+          <li>Sharpened communication by hearing guest requests and responding clearly</li>
+          <li>Practiced patience and professionalism with demanding guests</li>
+          <li>Coordinated with other servers as a team to keep events on track</li>
+        </ul>
+      </div>
+      <div class="tl-growth">
+        <span class="tl-growth-label">Growth</span>
+        <span>This made me more outgoing and confident when approaching guests. Working in a fast-paced environment also trained me to stay calm, adapt quickly, and perform better under pressure.</span>
+      </div>
+    </article>
+
+    <article class="tl-item" style="--tx: -300px; --ty: 240px; --rot: -5deg;">
+      <header class="tl-head">
+        <div class="tl-date">2021 — 2022</div>
+        <div class="tl-tag">Freelance</div>
+      </header>
+      <h3 class="tl-role">Freelance Dropshipping &amp; Reselling</h3>
+      <div class="tl-org">Self-initiated · with my brother</div>
+      <p class="tl-desc">
+        Ran a small freelance dropshipping and reselling project — sourcing furniture from Taobao and
+        reselling on Carousell. At the time, not many people locally were familiar with using Taobao,
+        so we saw a chance to help customers access affordable furniture through a platform they already used.
+      </p>
+      <div class="tl-points">
+        <div class="tl-points-label">// Key takeaways</div>
+        <ul>
+          <li>Spotted a market gap and turned it into a simple, working business opportunity</li>
+          <li>Managed customer enquiries, expectations, and communication directly</li>
+          <li>Picked up sales and pricing fundamentals through real Carousell listings</li>
+          <li>Problem-solved by understanding what customers needed and making the buying process easier</li>
+          <li>Got first exposure to entrepreneurship — sourcing, reselling, customer interactions</li>
+        </ul>
+      </div>
+      <div class="tl-growth">
+        <span class="tl-growth-label">Growth</span>
+        <span>This taught me to look for real problems people face and turn them into opportunities. It also gave me my first taste of customer management, online selling, and the kind of entrepreneurship mindset that connects with my interest in business and the GEIP programme.</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS + ECA -->
+<section class="module" id="achievements">
+  <div class="section-header reveal">
+    <div>
+      <div class="section-label">Records · Logbook</div>
+      <h2 class="section-title"><span class="num">04</span>Achievements &amp; ECA</h2>
+    </div>
+    <div class="section-meta">/ commendations</div>
+  </div>
+
+  <p class="achievements-hint reveal">Click any record to open its full log</p>
+
+  <div class="two-col">
+    <div class="col-block reveal">
+      <h3>Achievements</h3>
+      <ul class="record-list" id="achievementsList" data-record-type="achievement"></ul>
+    </div>
+    <div class="col-block reveal delay-1">
+      <h3>Co-Curricular Activities</h3>
+      <ul class="record-list" id="ecaList" data-record-type="eca"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- RECORD MODAL · opens when an achievement / ECA item is clicked -->
+<div class="record-modal" id="recordModal" aria-hidden="true">
+  <div class="record-backdrop" data-modal-close></div>
+  <div class="record-panel" role="dialog" aria-modal="true" aria-labelledby="recordTitle">
+    <!-- Animated particle background — generated by JS -->
+    <div class="record-particles" id="recordParticles" aria-hidden="true"></div>
+
+    <button class="record-close" id="recordClose" aria-label="Close" data-modal-close>×</button>
+
+    <div class="record-grid">
+      <div class="record-text">
+        <div class="record-eyebrow" id="recordType">// MISSION LOG</div>
+        <h3 class="record-title" id="recordTitle">Title</h3>
+        <div class="record-period" id="recordPeriod">Period · Organisation</div>
+        <p class="record-desc" id="recordDesc">Description.</p>
+        <div class="record-shows">
+          <span class="record-shows-label">// What it shows about me</span>
+          <p id="recordShows">Trait or quality.</p>
+        </div>
+      </div>
+      <div class="record-visual">
+        <div class="record-visual-frame" id="recordVisualFrame">
+          <!-- JS injects either an <img> or a "no visual yet" placeholder -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<section class="module" id="projects">
+  <div class="section-header reveal">
+    <div>
+      <div class="section-label">Mission Files · Archive</div>
+      <h2 class="section-title"><span class="num">05</span>Projects</h2>
+    </div>
+    <div class="section-meta">/ click to access</div>
+  </div>
+  <div class="case-archive">
+    <!-- HERO ROW — FILE 01 full-width -->
+    <div class="case-row case-row-hero">
+      <a href="project.html?id=01" class="case-card reveal">
+        <div class="case-image" style="background-image: url('assets/projects/convinight/title-screen.jpg');"></div>
+        <div class="case-overlay"></div>
+        <div class="case-info">
+          <div class="case-num">01</div>
+          <div class="case-meta">
+            <div class="case-extras">
+              <p class="case-desc">A theft prevention game where you work the night shift on the security cameras. Built with the Singapore Police Force as a school collab.</p>
+              <div class="case-tags">
+                <span>Unity</span><span>Game Dev</span><span>3D</span>
+              </div>
+            </div>
+            <h3 class="case-title">Convinight Shift</h3>
+          </div>
+          <div class="case-cta">
+            <span>Open File</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- SECONDARY ROW — FILE 02 + 03 side-by-side -->
+    <div class="case-row case-row-pair">
+      <a href="project.html?id=02" class="case-card reveal delay-1">
+        <div class="case-image" style="background-image: url('assets/projects/world-without-assumption/vr-island-environment.jpg');"></div>
+        <div class="case-overlay"></div>
+        <div class="case-info">
+          <div class="case-num">02</div>
+          <div class="case-meta">
+            <div class="case-extras">
+              <p class="case-desc">A VR empathy experience that puts you in the perspective of people with disabilities — then asks you to redesign the environment.</p>
+              <div class="case-tags">
+                <span>VR</span><span>Unity</span><span>Accessibility</span>
+              </div>
+            </div>
+            <h3 class="case-title">World Without Assumption</h3>
+          </div>
+          <div class="case-cta">
+            <span>Open File</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="project.html?id=03" class="case-card reveal delay-2">
+        <div class="case-image" style="background-image: url('assets/projects/prestige/website-homepage.jpg');"></div>
+        <div class="case-overlay"></div>
+        <div class="case-info">
+          <div class="case-num">03</div>
+          <div class="case-meta">
+            <div class="case-extras">
+              <p class="case-desc">A product showcase site where 3D modelled casings meet blind-box style shopping. I modelled and built the front-end.</p>
+              <div class="case-tags">
+                <span>3D</span><span>Web</span><span>Product</span>
+              </div>
+            </div>
+            <h3 class="case-title">Prestige</h3>
+          </div>
+          <div class="case-cta">
+            <span>Open File</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!--
+      ===== Template for FILE 04 =====
+      To add another project: copy one of the case-card blocks above
+      into either case-row-pair (becomes 3-up below) or add a new row.
+      Update href, image, num, title, desc, and tags.
+      Also update the matching '04' entry in js/project.js,
+      bump the "Projects Launched" stat in the About section,
+      and put screenshots in assets/projects/your-project-name/.
+    -->
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="module" id="contact">
+  <div class="section-header reveal">
+    <div>
+      <div class="section-label">Establish Connection · Open Channel</div>
+      <h2 class="section-title"><span class="num">06</span>Contact</h2>
+    </div>
+    <div class="section-meta">/ transmit signal</div>
+  </div>
+
+  <div class="contact-grid">
+    <div class="contact-intro reveal">
+      <p class="contact-lead">
+        I'm always open to new opportunities, collaborations, and conversations about
+        immersive design, web development, or 3D work. Drop me a message — I'll get back
+        as soon as I can.
+      </p>
+      <p class="contact-sub">
+        Currently based in Singapore. Available for internships, freelance work, and
+        collaborative projects.
+      </p>
+    </div>
+
+    <div class="contact-channels reveal delay-1">
+      <a href="mailto:joelwongwanhao@gmail.com" class="contact-channel">
+        <div class="cc-label">// Email</div>
+        <div class="cc-value">joelwongwanhao@gmail.com</div>
+        <div class="cc-arrow">→</div>
+      </a>
+      <a href="https://github.com/Joel-wong-al" target="_blank" rel="noopener" class="contact-channel">
+        <div class="cc-label">// GitHub</div>
+        <div class="cc-value">github.com/Joel-wong-al</div>
+        <div class="cc-arrow">→</div>
+      </a>
+      <!--
+        LinkedIn slot — uncomment and fill in when ready:
+        <a href="https://linkedin.com/in/your-handle" target="_blank" rel="noopener" class="contact-channel">
+          <div class="cc-label">// LinkedIn</div>
+          <div class="cc-value">linkedin.com/in/your-handle</div>
+          <div class="cc-arrow">→</div>
+        </a>
+      -->
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="mailto:joelwongwanhao@gmail.com">Email</a>
+    <a href="https://github.com/Joel-wong-al" target="_blank" rel="noopener">GitHub</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">Behance</a>
+    <a href="#">Resume.pdf</a>
+  </div>
+  <div class="footer-meta">
+    Transmission End · <span>©</span> Joel Wong · Crafted in deep space
+  </div>
+</footer>
+
+<!-- THREE.JS LIBRARY (loaded from CDN) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<!-- OUR JAVASCRIPT MODULES -->
+<script src="js/cursor.js"></script>
+<script src="js/stars.js"></script>
+<script src="js/intro.js"></script>
+<script src="js/landing.js"></script>
+<script src="js/planets.js"></script>
+<script src="js/experience.js"></script>
+<script src="js/achievements.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
